@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>TON</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+<!--  <link href="css/style.min.css" rel="stylesheet" media="screen">-->
+
+  <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+
+<body>
+
+<div id="ton-connect"></div>
+
+<script>
+  const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+    manifestUrl: 'https://bd.progressio.agency/jtv/tonconnect-manifest.json',
+    buttonRootId: 'ton-connect'
+  });
+</script>
+
+<script>
+  async function connectToWallet() {
+    const connectedWallet = await tonConnectUI.connectWallet();
+    // Do something with connectedWallet if needed
+    console.log(connectedWallet);
+  }
+
+  // Call the function
+  connectToWallet().catch(error => {
+    console.error("Error connecting to wallet:", error);
+  });
+</script>
+
+<!--
+aboutUrl
+:
+"https://wallet.tg/"
+account
+:
+address
+:
+"0:4a4bdc5c156df0e5feb18d646c1f0223405906057b4f8960eb458c09838c530b"
+chain
+:
+"-239"
+publicKey
+:
+"22ef35df708534c4b5ae8cce54983ef87a160832e3f41d548286e992d7b6f3aa"
+walletStateInit
+:
+"te6cckECFgEAAwQAAgE0ARUBFP8A9KQT9LzyyAsCAgEgAxACAUgEBwLm0AHQ0wMhcbCSXwTgItdJwSCSXwTgAtMfIYIQcGx1Z70ighBkc3RyvbCSXwXgA/pAMCD6RAHIygfL/8nQ7UTQgQFA1yH0BDBcgQEI9ApvoTGzkl8H4AXTP8glghBwbHVnupI4MOMNA4IQZHN0crqSXwbjDQUGAHgB+gD0BDD4J28iMFAKoSG+8uBQghBwbHVngx6xcIAYUATLBSbPFlj6Ahn0AMtpF8sfUmDLPyDJgED7AAYAilAEgQEI9Fkw7UTQgQFA1yDIAc8W9ADJ7VQBcrCOI4IQZHN0coMesXCAGFAFywVQA88WI/oCE8tqyx/LP8mAQPsAkl8D4gIBIAgPAgEgCQ4CAVgKCwA9sp37UTQgQFA1yH0BDACyMoHy//J0AGBAQj0Cm+hMYAIBIAwNABmtznaiaEAga5Drhf/AABmvHfaiaEAQa5DrhY/AABG4yX7UTQ1wsfgAWb0kK29qJoQICga5D6AhhHDUCAhHpJN9KZEM5pA+n/mDeBKAG3gQFImHFZ8xhAT48oMI1xgg0x/TH9MfAvgju/Jk7UTQ0x/TH9P/9ATRUUO68qFRUbryogX5AVQQZPkQ8qP4ACSkyMsfUkDLH1Iwy/9SEPQAye1U+A8B0wchwACfbFGTINdKltMH1AL7AOgw4CHAAeMAIcAC4wABwAORMOMNA6TIyx8Syx/L/xESExQAbtIH+gDU1CL5AAXIygcVy//J0Hd0gBjIywXLAiLPFlAF+gIUy2sSzMzJc/sAyEAUgQEI9FHypwIAcIEBCNcY+gDTP8hUIEeBAQj0UfKnghBub3RlcHSAGMjLBcsCUAbPFlAE+gIUy2oSyx/LP8lz+wACAGyBAQjXGPoA0z8wUiSBAQj0WfKnghBkc3RycHSAGMjLBcsCUAXPFlAD+gITy2rLHxLLP8lz+wAACvQAye1UAFEAAAAAKamjFyLvNd9whTTEta6MzlSYPvh6Fggy4/QdVIKG6ZLXtvOqQO3VGxk="
+[[Prototype]]
+:
+Object
+appName
+:
+"telegram-wallet"
+bridgeUrl
+:
+"https://bridge.tonapi.io/bridge"
+deepLink
+:
+undefined
+device
+:
+appName
+:
+"telegram-wallet"
+appVersion
+:
+"1"
+features
+:
+(2) ['SendTransaction', {…}]
+maxProtocolVersion
+:
+2
+platform
+:
+"browser"
+[[Prototype]]
+:
+Object
+imageUrl
+:
+"https://wallet.tg/images/logo-288.png"
+name
+:
+"Wallet"
+openMethod
+:
+"universal-link"
+platforms
+:
+(5) ['ios', 'android', 'macos', 'windows', 'linux']
+provider
+:
+"http"
+tondns
+:
+undefined
+universalLink
+:
+"https://t.me/wallet?attach=wallet"
+-->
+
+</body>
+</html>
